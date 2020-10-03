@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+    <title>Flying Circus - home page</title>
+  </head>
+  <body>
+  <div class="container">
+      {%  if session[username] %}
+      <h1>Welcome to Flying Circus, {{ session[username] }}!</h1>
+      <a href="{{ url_for('logout') }}">Logout</a>
+      {%  else %}
+      <h1>Welcome to Flying Circus!</h1>
+      <a href="{{ url_for('login') }}">Login</a>
+      {%  endif %}
+
+  </div>
+  <script src="{{ url_for('static', filename='js/bootstrap.bundle.js')}}"></script>
+  </body>
+</html>

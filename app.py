@@ -11,7 +11,7 @@ app.secret_key = urandom(16)
 
 @app.route('/')
 def index():
-    response = make_response(render_template('index.html', username=SESSION_USERNAME))
+    response = make_response(render_template('index2.html', username=SESSION_USERNAME))
     #response.set_cookie('nazwa_uzytkownika', 'tony halik')
     return response
 
@@ -43,6 +43,10 @@ def bad_login():
 def logout():
     session.pop(SESSION_USERNAME)
     return redirect(url_for('index'))
+
+@app.route('/index2/')
+def index2():
+    return render_template('index2.html')
 
 if __name__ == '__main__':
     app.run()
