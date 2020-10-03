@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flying circus</title>
+</head>
+<body>
+{%  if session[username] %}
+    <a href="{{ url_for('logout') }}">Logout</a>
+    <h1>Welcome to the Flying Circus, {{ session[username] }}!</h1>
+{% else %}
+    <a href="{{ url_for('login') }}">Login</a>
+    <h1>Welcome to Flying Circus!</h1>
+{% endif %}
+</body>
+</html>

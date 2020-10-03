@@ -1,0 +1,1 @@
+users = {'kamil' : b'$2b$12$k2tK.mB1pK2LJLonOE3UieHfhuiWCvdYiT.YuybeMFHje7BWIaaFG'}
